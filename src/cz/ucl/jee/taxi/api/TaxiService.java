@@ -67,7 +67,6 @@ public class TaxiService {
 			order = existingOrder;
 			if (existingOrder.getTaxiNumber() == null) {
 				order.setTaxiNumber(carNumber);
-				dao.updateOrder(order);
 			}
 		} else {
 			order.setTaxiNumber(carNumber);
