@@ -1,0 +1,23 @@
+curl --request PUT \
+  --url 'http://localhost:8090/taxi/orders/order?orderNumber=2' \
+  --header 'content-type: application/json' \
+  --data '{
+    "addressFrom": "Vymyslena 13, Praha 3",
+    "addressTo": "Nevymyslena 24",
+    "arrivalTime": "18:33"
+}'
+
+curl --request DELETE \
+  --url 'http://localhost:8090/taxi/orders/delete?orderNumber=2'
+
+curl --request POST \
+  --url http://localhost:8090/taxi/orders/request \
+  --header 'content-type: application/json' \
+  --data '{
+    "addressFrom": "Vymyslena 13, Praha 3",
+    "addressTo": "Nevymyslena 24",
+    "arrivalTime": "18:33"
+}'
+
+curl --request GET \
+  --url http://localhost:8090/taxi/orders/all

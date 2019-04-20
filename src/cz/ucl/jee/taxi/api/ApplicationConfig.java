@@ -1,4 +1,4 @@
-package cz.ucl.jee.taxi;
+package cz.ucl.jee.taxi.api;
 
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
